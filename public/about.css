@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: "Dongle-light";
+    src: url("Dongle/Dongle-Light.ttf");
+}
+@font-face {
+    font-family: "Dongle-regular";
+    src: url("Dongle/Dongle-Regular.ttf");
+}
+@font-face {
+    font-family: "Dongle-bold";
+    src: url("Dongle/Dongle-Bold.ttf");
+}
+#contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color:#ff7f50;
+
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #info-phone,
+  #info-email {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    font-weight: bold;
+    margin-left: 9px;
+  }
+  
+  #icon-info {
+    display: flex;
+    gap: 15px;
+  }
+  
+  #icon-info i {
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+  }
+  #Title img{
+    width: 100%;
+    border-radius: 70%;
+    height: 100px;
+    padding: 0;
+    /* font-style: italic;
+    font-size: 29px;
+    color: #ff7f50;
+    font-weight: bold; */
+  }
+#nav-menu li{
+   padding-left: 20px;
+   
+}
+
+#nav-menu li a{
+    color:#333;
+    font-family: "Dongle-bold";
+    font-size: 28px;
+}
+
+/* .head1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100% ;
+    font-family:"Dongle-bold";
+
+    height: 460px;
+    background-image:url( images/Nature/hill-station-7-days-.jpg);
+} */
+#subhead{
+    position: relative;
+    padding-bottom: 0;
+    text-align: center;
+    color:white;
+    font-family:"Dongle-bold";
+    /* font-size: 96px; */
+}
+#subhead h2{
+    font-size: 89px;
+
+}
+#subhead h1{
+    font-size: 80px;
+    color: white;
+    margin-top: 0;
+}
+
+
+.head1 {
+    font-family:"Dongle-bold";
+
+    background-image: linear-gradient(rgba(18, 16, 16, 0.5), rgba(52, 50, 50, 0.5)),url('images/Nature/hill-station-7-days-.jpg'); /* Add your background image path here */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 400px; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    /* clip-path: polygon(0 0, 100% 0, 100% 80%, 0 80%); */
+    border-bottom-left-radius: 110px;
+    border-bottom-right-radius: 110px;
+  
+}
+
+.head2{
+    text-align: center;
+    color: white; /* Adjust text color as needed */
+    /* background-color: rgba(0, 0, 0, 0.5); Optional: Add background color with transparency for better readability */
+    /* padding: 20px; */
+    border-radius: 10px;
+    font-family: 'Nunito', sans-serif;
+ 
+}
+/* .head2:h1{
+    color: white;
+    font-weight:bold;
+    font-size: 15px;
+} */
+/* .head2 h3, .head2 h1, .head2 p {
+    color: white; /* Set text color to white */
+   
+
+/* .head2 p{
+    font-size: 20px;
+} */ 
+
+.sec-info {
+    position: relative;
+    top: -100px; /* Adjust this value to control the overlap */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(249, 250, 227); /* Adjust background color as needed */
+    width: 60%;
+    height: 250px; /* Adjust width as needed */
+    box-shadow: 0 4px 8px rgba(24, 24, 24, 0.1);
+    z-index: 10;
+  
+}
+
+.sec-info h3 {
+    margin: 0;
+    text-align: center;
+    font-size: 35px;
+    color: #000000; /* Adjust text color as needed */
+    font-family: "Dongle-regular";
+    
+}
+@media only screen and (max-width: 768px) {
+    .sec-info {
+      width: 80%; /* Adjust width for smaller screens */
+      height: auto; /* Allow height to adjust based on content */
+      padding: 15px; /* Adjust padding */
+      top: -50px; /* Adjust position */
+    }
+}  
+/* objective of about us */
+body {
+    font-family:"Dongle-bold";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    font-family:"Dongle-bold";
+
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.objectives-section {
+    background-color: orangered;
+    color: white;
+    padding: 40px 0;
+    margin-top: 0;
+}
+
+.objectives-section h2 {
+    font-family: "Dongle-bold";
+    text-align: center;
+    font-size: 67px;
+    margin-bottom: 20px;
+}
+
+.objectives-section p {
+    font-family: "Dongle-regular";
+
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.objectives-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.objective-item {
+    width: 45%;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.objective-item i {
+    font-size: 1.5em;
+    margin-right: 10px;
+    
+}
+.objective-item1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .objective-item1 i {
+    margin-right: 10px;
+    color: #01060e;
+  }
+  
+
+.objective-item p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.objectives-section2 {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+.objectives-section2 h2,
+.objectives-section2 p {
+    text-align: center;
+}
+
+.objectives-section2 h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-family: "Dongle-bold";
+}
+
+.objectives-section2 h4 {
+    text-align: left;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.more-info {
+    position: relative;
+    top: -10px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(241, 232, 214);
+    width: 60%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(88, 88, 74, 0.1);
+    z-index: 10;
+}
+
+.more-info p {
+    margin: 0;
+    text-align: left;
+    font-size: 25px;
+    color: #000000;
+    font-family: "Dongle-regular";
+}
+
+.team {
+    background-color: rgb(238, 235, 230);
+    padding: 40px 0;
+}
+
+.team-head {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #000000;
+    font-family: "Dongle-bold";
+
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 8px;
+}
+
+.card {
+    width: 200px;
+    text-align: center;
+    margin: 4px 8px;
+    padding: 4px 18px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #000;
+    font-size: 1.5em;
+}
+
+/* footer p {
+    text-align: center;
+    margin-top: 10px;
+    color: #000;
+} */
+
+footer{
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    align-items: center;
+}
+.social-icons a{
+    color: #fff;
+    font-size: 24px;
+    margin-right: 20px;
+}
+footer p{
+    font-family: "Dongle-regular";
+    font-size: 1.4rem;
+}

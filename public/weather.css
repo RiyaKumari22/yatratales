@@ -1,0 +1,323 @@
+
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  /* padding: 10px 10pt; */
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  background-image: url(images/weather.jpg);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Contact Info Styles */
+*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: "Dongle-light";
+  src: url("Dongle/Dongle-Light.ttf");
+}
+@font-face {
+  font-family: "Dongle-regular";
+  src: url("Dongle/Dongle-Regular.ttf");
+}
+@font-face {
+  font-family: "Dongle-bold";
+  src: url("Dongle/Dongle-Bold.ttf");
+}
+#contact-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ff7f50;
+  border-bottom: 1px solid #ddd;
+}
+
+#info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#info-phone,
+#info-email {
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  font-weight: bold;
+  margin-left: 9px;
+}
+
+#icon-info {
+  display: flex;
+  gap: 15px;
+}
+
+#icon-info i {
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+#Title img{
+  width: 100%;
+  border-radius: 70%;
+  height: 100px;
+  padding: 0;
+  /* font-style: italic;
+  font-size: 29px;
+  color: #ff7f50;
+  font-weight: bold; */
+}
+#nav-menu li{
+ padding-left: 20px;
+ 
+}
+
+#nav-menu li a{
+  color:#333;
+  font-family: "Dongle-bold";
+  font-size: 28px;
+}
+
+#dropdown1{
+  color:#333;
+  font-family: "Dongle-bold";
+  font-size: 28px;
+}
+
+
+.hero{
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+.hero-image img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.hero-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  color: #fff;
+}
+.hero-content h1{
+  font-family: "Dongle-bold";
+  font-size: 4rem;
+}
+.hero-content p{
+  font-family: "Dongle-regular";
+  font-size: 1.8rem;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+.hero-button{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff7f50;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-family: "Dongle-light";
+  font-size: 1.6rem;
+  transition: all ease 0.3s;
+}
+.hero-button:hover{
+  background-color: white;
+  color: #ff7f50;
+  font-weight: bolder;
+}
+/* Card Styles */
+.card {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  max-width: 600px;
+}
+
+#search {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Contact Section Styles */
+
+footer {
+  background-color: #333; /* Dark background color for the footer */
+  color: #fff; /* Light text color for contrast */
+  /* margin-bottom: 60px; */
+  padding: 35px 0 0 40px;
+  text-align: center;
+height: 100px;
+}
+
+/* .social-icons {
+  margin-bottom: 10px;
+} */
+
+.social-icons a {
+  color: #fff; /* White color for the social icons */
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.social-icons a:hover {
+  color:#65747b; 
+}
+
+ 
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+
+
+::placeholder {
+  color: #fff;
+}
+
+input {
+  background-color: #575757;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: "Dongle-bold";
+  font-size: 30px;
+  padding: 1rem;
+  min-width: 300px;
+  color: #fff;
+  transition: 0.2s;
+}
+#search{
+  text-align: center;
+}
+
+input#search:hover {
+  background: #65747b;
+}
+
+input:focus {
+  outline: none;
+  align-items: center;
+  margin-bottom: 0;
+  padding-left: 85px;
+}
+
+.weather {
+  font-size: 40px;
+  text-align: center;
+  font-family: "Dongle-bold";
+
+  margin-top:2px ;
+}
+
+.weather h2 p small {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  padding-left: 90px;
+  margin-top:2px ;
+  
+}
+
+
+.card {
+    margin: 0 auto;
+    padding: 20px;
+    width: 400px; /* Fixed width for the card */
+    height: 500px; /* Fixed height for the card */
+    background-color: #dedba1;
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    /* background-image: url(images/weather-background.jpg); */
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    box-sizing: border-box;
+    color: #ff6f61;
+    border: 1px solid #ccc;
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.Weather-info {
+    width: 100%; /* Ensure it takes full width of the card */
+    height: 500px; /* Ensure it takes full height of the card */
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    
+    overflow: hidden; /* Hide overflowing content */
+}
+.Weather-info h1{
+  font-family: "Dongle-bold";
+  font-size: 46px;
+  color:#ff7f50;
+}
+
+/* For desktops and laptops */
+@media (min-width: 1025px) {
+  .card {
+      max-width: 800px;
+      min-height: 400px;
+      max-height: 900px;
+      padding: 40px;
+  }
+}
+
+/* For extra large screens */
+@media (min-width: 1440px) {
+  .card {
+      max-width: 1000px;
+      min-height: 500px;
+      max-height: 800px;
+      padding: 50px;
+  }
+}
+
+/* For small screens (phones in portrait and landscape) */
+@media (max-width: 599px) {
+  .card {
+      max-width: 100%;
+      min-height: 200px;
+      max-height: 400px;
+      padding: 20px;
+  }
+}
+#form {
+  margin-bottom: 20px;
+  height: 400px; /* Space between form and main content */
+ }
+
+#search {
+  width: 100%;
+  padding: 10px;
+  font-size: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+  font-family: "Dongle-regular";
+}

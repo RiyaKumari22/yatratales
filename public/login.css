@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');
+@font-face {
+    font-family: "Dongle-light";
+    src: url("Dongle/Dongle-Light.ttf");
+}
+@font-face {
+    font-family: "Dongle-regular";
+    src: url("Dongle/Dongle-Regular.ttf");
+}
+@font-face {
+    font-family: "Dongle-bold";
+    src: url("Dongle/Dongle-Bold.ttf");
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+.bg-img{
+  background: url(images/login.webp);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+.bg-img:after{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  text-align: center;
+  padding: 50px 32px;
+  border-radius: 10px;
+  width: 370px;
+  background-color:rgb(197, 196, 196);
+  transform: translate(-50%,-50%);
+  /* background: rgba(231, 226, 226, 0.04); */
+  box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+}
+.content h1{
+  color:#ff7f50;
+  font-size: 53px;
+  font-weight: 600;
+  /* margin: 0 0 35px 0; */
+  font-family: "Dongle-bold";
+}
+.field{
+  position: relative;
+  height: 45px;
+  width: 100%;
+  display: flex;
+  background: #ff7f50;
+}
+.field span{
+  color: #222;
+  width: 40px;
+  line-height: 45px;
+}
+.field input{
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #222;
+  font-size: 27px;
+  font-family: "Dongle-regular";
+}
+.space{
+  margin-top: 16px;
+}
+
+.field input[type="submit"]{
+  background:#ff7f50;
+  border: 1px solid #ff7f50;
+  color: white;
+  font-size: 38px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Dongle-bold";
+}
+.field input[type="submit"]:hover{
+  background: white;
+  color: #ff7f50;
+}
+
+

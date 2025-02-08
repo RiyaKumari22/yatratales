@@ -1,0 +1,196 @@
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Dongle-light";
+  src: url("Dongle/Dongle-Light.ttf");
+}
+@font-face {
+  font-family: "Dongle-regular";
+  src: url("Dongle/Dongle-Regular.ttf");
+}
+@font-face {
+  font-family: "Dongle-bold";
+  src: url("Dongle/Dongle-Bold.ttf");
+}
+
+.sidebar {
+  /* height: 100%; */
+  /* width: 0; */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  /* background-color: coral; */
+  overflow-x: hidden;
+  /* transition: 0.5s; */
+  padding-top: 100px;
+  width: 260px;
+  height: calc(100vh - 72px);
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+ 
+}
+
+.sidebar a {
+  /* padding: 10px 15px; */
+  margin-top: 20px;
+  font-family: "Dongle-bold";
+
+  height: 70px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 0 12px;
+  text-decoration: none;
+  font-size: 29px;
+  color: black;
+  display: block;
+  transition: 0s;
+  /* padding: 20px; */
+/* background-color: rgb(216, 214, 214)196, 190, 190); */
+/* border: 3px solid black; */
+}
+
+.sidebar a:hover {
+  color:tomato;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  
+  margin-left: 50px;
+}
+
+.navbar {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  
+  background-color: coral;
+  overflow: hidden;
+}
+
+.navbar .openbtn {
+  font-size: 33px;
+  cursor: pointer;
+  background-color:coral;
+ margin-top: -10px ;
+
+  color: white;
+  padding: 29px 15px;
+  border: none;
+  
+}
+.navbar h2{
+  color: black;
+  margin-left: 510px;
+  /* margin-bottom: -112px; */
+  margin-top: 11px;
+  font-family: "Dongle-bold";
+ font-size: 44px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+.container-card .card {
+  background-color: coral;
+
+  margin: 20px; 
+  display: flex;
+  flex-direction: column;
+   
+  align-items: center; 
+  text-align: center;  
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 190px;
+}
+.card a{
+  text-decoration: none;
+  color: black;
+  margin-top: 25px;
+  font-family: "Dongle-bold";
+font-size: 50px;
+}
+.card a span{
+  color: white;
+}
+.container-card {
+  margin-left: 290px; 
+
+  display: flex; 
+  /* justify-content: space-between;  */
+  width: calc(100% -30px);
+}
+.container-password-card {
+  max-width: 400px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.container-password-card h2{
+  margin-top: 0px;
+text-align: center;
+font-family: "Dongle-bold";
+font-size: 46px;
+}
+
+/* Form styles */
+#changePasswordForm {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.password-text {
+  
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.password-button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.password-button:hover {
+  background-color: #575757;
+}
+
+/* Response message styles */
+#response {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #333;
+}
+.optionX{
+  text-align: left;
+  justify-content: space-around;
+  padding:5px 5px ;
+  font-weight: bold;
+  font-size: 20px;
+}
+.container-div h2{
+  text-align: center;
+  font-weight: bold;
+}

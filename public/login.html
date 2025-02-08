@@ -1,0 +1,80 @@
+ <!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>YatraTales- Login</title>
+      <link rel="stylesheet" href="login.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+      <div class="bg-img">
+         <div class="content">
+            <img src="images/logo (2).png" width="40%" height="100px" style="border-radius: 60%;" alt="">
+            <h1>LOGIN</h1>
+            <form id="loginForm" action="#">
+               <div class="field">
+                  <span class="fa fa-user"></span>
+                  <input id="username" type="text" required placeholder="Username">
+               </div>
+               <div class="field space">
+                  <span class="fa fa-lock"></span>
+                  <input id="password" type="password" class="pass-key" required placeholder="Password">
+               
+               </div>
+              <div class="field space">
+
+                 <input type="submit"></input>
+              </div>
+
+            </form>
+    <div id="message"></div>
+          
+            
+         </div>
+      </div> 
+      <script>
+       document.getElementById('loginForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    const response = await fetch('/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+    });
+
+    const result = await response.json();
+    if (result.success) {
+        window.location.href = result.redirectTo;
+    } else {
+        document.getElementById('message').textContent = result.message;
+    }
+});
+
+document.getElementById('registerForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    const username = document.getElementById('regUsername').value;
+    const password = document.getElementById('regPassword').value;
+
+    const response = await fetch('/register', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+    });
+
+    const result = await response.json();
+    document.getElementById('registerMessage').textContent = result.message;
+});
+
+
+      </script>
+ 
+   </body>
+</html> 
+

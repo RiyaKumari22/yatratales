@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin </title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="admin.html"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;Home</a>
+        <a href="contacts.html"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;Contact Us</a>
+        <a href="enquirys.html"><i class="fa-solid fa-circle-question"></i>&nbsp;&nbsp;Enquiry</a>
+        <a href="createLocation.html"><i class="fa-sharp fa-solid fa-location-dot"></i>&nbsp;&nbsp;Create Location</a>
+        <a href="addplace.html"><i class="fa-solid fa-location-pin"></i>&nbsp;&nbsp;Add Places details</a>
+        <a href="change-password.html"><i class="fa-solid fa-key"></i>&nbsp;Change Password</a>
+        <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;Logout</a>
+    </div>
+    
+    <div class="navbar">
+        <span class="openbtn" onclick="openNav()">&#9776;</span>
+        <h2>Admin Dashboard</h2>
+    </div>
+    
+    <div class="container-card">
+        <div class="card" id="card1" style="width: 18rem;">
+            <a href="enquirys.html" class="Enquiry-card">Enquiry <br> <span id="enquiryCount">0 </span> enquiries</a>
+            
+        </div>
+        <div class="card" id="card3" style="width: 18rem;">
+            <a href="contacts.html" class="Contact-card">Contact Us  <br> <span id="contactCount">0</span> contacts</a>
+        </div>
+    </div>
+
+    <script>
+        async function fetchCounts() {
+            try {
+                // Fetch enquiry count
+                const enquiryResponse = await fetch('/enquiries/count');
+                if (!enquiryResponse.ok) throw new Error('Failed to fetch enquiry count');
+                const { count: enquiryCount } = await enquiryResponse.json();
+                document.getElementById('enquiryCount').textContent = enquiryCount;
+
+                // Fetch contact count
+                const contactResponse = await fetch('/contacts/count');
+                if (!contactResponse.ok) throw new Error('Failed to fetch contact count');
+                const { count: contactCount } = await contactResponse.json();
+                document.getElementById('contactCount').textContent = contactCount;
+            } catch (error) {
+                console.error('Fetch error:', error);
+                alert('Failed to fetch counts.');
+            }
+        }
+
+        function openNav() {
+            document.getElementById("sidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("sidebar").style.width = "0";
+        }
+
+        window.onload = function() {
+            closeNav();
+            fetchCounts();
+        };
+    </script>
+     <script
+     src="https://kit.fontawesome.com/6558443b63.js"
+     crossorigin="anonymous"
+   ></script>
+</body>
+</html>

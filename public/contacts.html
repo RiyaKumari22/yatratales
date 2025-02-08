@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin- Contact Us</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        .container-card {
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .container-card h2 {
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #d8d5d5;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        
+        td button{
+            background-color:#ff7f50;
+            border: 2px solid #ff7f50;
+            color: white;
+            border-radius: 10%;
+            cursor: pointer;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 15px;
+        }
+        td button:hover{
+            background-color:orangered;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="admin.html"><i class="fa-solid fa-house"></i>&nbsp;&nbsp;Home</a>
+        <a href="contacts.html"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;Contact Us</a>
+        <a href="enquirys.html"><i class="fa-solid fa-circle-question"></i>&nbsp;&nbsp;Enquiry</a>
+        <a href="createLocation.html"><i class="fa-sharp fa-solid fa-location-dot"></i>&nbsp;&nbsp;Create Location</a>
+        <a href="addplace.html"><i class="fa-solid fa-location-pin"></i>&nbsp;&nbsp;Add Places details</a>
+        <a href="change-password.html"><i class="fa-solid fa-key"></i>&nbsp;Change Password</a>
+        <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;Logout</a>
+    </div>
+    
+    <div class="navbar">
+        <span class="openbtn" onclick="openNav()">&#9776;</span>
+        <h2>Admin Dashboard</h2>
+    </div>
+    <div class="container-card">
+        <h2>Contact Details</h2>
+        <div id="contacts"></div>
+    </div>
+
+    <script>
+        async function fetchContacts() {
+            try {
+                const response = await fetch('/contacts');
+                if (!response.ok) throw new Error('Network response was not ok');
+                const contacts = await response.json();
+                const contactsDiv = document.getElementById('contacts');
+
+                // Create table and headers
+                let tableHTML = `
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Message</th>
+                                <th>Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                `;
+
+                contacts.forEach(contact => {
+                    tableHTML += `
+                        <tr>
+                            <td>${contact.name}</td>
+                            <td>${contact.email}</td>
+                            <td>${contact.phone}</td>
+                            <td>${contact.message}</td>
+                            <td>${new Date(contact.date).toLocaleString()}</td>
+                            <td>
+                                <button onclick="deleteContact('${contact._id}')">Delete</button>
+                            </td>
+                        </tr>
+                    `;
+                });
+
+                tableHTML += `
+                        </tbody>
+                    </table>
+                `;
+
+                contactsDiv.innerHTML = tableHTML;
+            } catch (error) {
+                console.error('Error fetching contacts:', error);
+            }
+        }
+
+        async function deleteContact(id) {
+            try {
+                const response = await fetch(`/contacts/${id}`, { method: 'DELETE' });
+                if (response.ok) {
+                    fetchContacts(); // Refresh contacts list after deletion
+                } else {
+                    console.error('Failed to delete contact');
+                }
+            } catch (error) {
+                console.error('Error deleting contact:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchContacts);
+        function openNav() {
+            document.getElementById("sidebar").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("sidebar").style.width = "0";
+        }
+
+        window.onload = function() {
+            closeNav();
+        };
+    </script>
+  <script
+  src="https://kit.fontawesome.com/6558443b63.js"
+  crossorigin="anonymous"
+></script>
+</body>
+</html>
