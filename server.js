@@ -8,7 +8,7 @@ const app = express();
 const port = 3000;
 const cors = require('cors');
 require('dotenv').config();
-const mongoUri=process.env.MONGODB_URI;
+const mongoUri=process.env.MONGO_URI;
 app.use(cors());
 // Middleware to parse JSON and URL-encoded bodies
 app.use(bodyParser.json());
